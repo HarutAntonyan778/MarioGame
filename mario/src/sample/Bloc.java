@@ -9,10 +9,10 @@ import javafx.scene.image.ImageView;
  */
 public class Bloc implements Runnable{
     private Image blocImage;
-    private ImageView blocImageView;
+    protected ImageView blocImageView;
     public boolean broken = false;
     private int speed = 10;
-    private boolean top = false;
+    protected boolean top = false;
     private int dv = 2;
 
     public Bloc(int x,int y) {
@@ -24,6 +24,17 @@ public class Bloc implements Runnable{
         blocImageView.setFitWidth(30);
 
         Main.root.getChildren().addAll(blocImageView);
+    }
+
+    protected Bloc(int x, int y, Image blocImage) {
+        blocImageView = new ImageView(blocImage);
+        blocImageView.setLayoutY(y);
+        blocImageView.setLayoutX(x);
+        blocImageView.setFitHeight(30);
+        blocImageView.setFitWidth(30);
+
+        Main.root.getChildren().addAll(blocImageView);
+
     }
         public boolean checker(double down1, double up1, double down2, double up2) {
         boolean check = false;
@@ -94,7 +105,7 @@ public class Bloc implements Runnable{
         }.start();
     }
 
-    private void jump() {
+    protected void jump() {
 
         if (top) {
             speed -= dv;

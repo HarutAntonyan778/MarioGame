@@ -34,6 +34,8 @@ public class Main extends Application {
         background.run();
         mario.run();
         blocks = new Blocks();
+        Pipe pipe = new Pipe(960,90);
+        pipe.run();
 
         return root;
     }

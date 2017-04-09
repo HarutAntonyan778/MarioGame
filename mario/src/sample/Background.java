@@ -4,6 +4,8 @@ import javafx.animation.AnimationTimer;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+
+
 /**
  * Created by harut on 4/8/17.
  */
@@ -28,6 +30,8 @@ public class Background implements Runnable {
         backgroundImageView2.setLayoutY(0);
 //        backgroundImageView2.setFitWidth(Main.WIDTH);
 //        backgroundImageView2.setFitHeight(Main.HEIGHT);
+
+
 
         addImages();
 
