@@ -56,7 +56,6 @@ public class Bloc implements Runnable{
                         blocImageView.getLayoutY()-blocImageView.getFitHeight(),blocImageView.getLayoutY())
                         ) {
                     Mario.setDirectionX(0);
-                    System.out.println("mouse");
                     //Mario.marioImageView.setLayoutX(blocImageView.getLayoutX() - Mario.marioImageView.getFitWidth());
                 }
                 if (checker(Mario.marioImageView.getLayoutX(),Mario.marioImageView.getLayoutX()+Mario.marioImageView.getFitWidth(),
@@ -81,7 +80,7 @@ public class Bloc implements Runnable{
                     Mario.inBloc = true;
                     Mario.speed = 5;
                     Mario.top = false;
-                    System.out.println("xoz");
+
 //                    if (Mario.getDirectionX() == 1)
 //                        Mario.marioImageView.setLayoutX(Mario.marioImageView.getLayoutX() + Background.speed);
 //                    if (Mario.getDirectionX() == -1)
